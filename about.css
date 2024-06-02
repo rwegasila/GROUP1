@@ -1,0 +1,17 @@
+* {
+    padding: 0;
+    margin: o;
+    border-radius: border-box;
+    font-size: 105%;
+  }
+
+body {
+    margin: 0;
+    background-color: rgb(31, 24, 24);
+    color: whitesmoke;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }

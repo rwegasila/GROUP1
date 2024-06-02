@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lisa Njau - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background: url('images/see1.avif') no-repeat center center/cover;
+            height: 100vh;
+            color: #fff;
+            text-align: center;
+            position: relative;
+        }
+        
+        .navbar {
+            background: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            padding: 10px;
+            transition: background 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+        }
+        
+        .header-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+        }
+        
+        .header-content h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .header-content p {
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+        
+        .header-content .btn {
+            text-decoration: none;
+            background: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        
+        .header-content .btn:hover {
+            background: #333;
+        }
+        
+        .about-me {
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        .about-me .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .about-me .text {
+            flex: 1;
+            padding: 20px;
+        }
+        
+        .about-me .text h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        
+        .about-me .text p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .about-me .image {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .about-me .image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        
+        .services {
+            background: url('images/see.avif') no-repeat center center/cover;
+            padding: 50px 0;
+            color: #fff;
+            text-align: center;
+        }
+        
+        .services .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .services h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+        }
+        
+        .services-box {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .service {
+            background: rgba(0, 0, 0, 0.6);
+            border: 2px solid #fff;
+            padding: 20px;
+            margin: 10px;
+            flex: 1;
+            min-width: 250px;
+            border-radius: 10px;
+        }
+        
+        .service h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+        
+        .service p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        
+        .service .btn {
+            text-decoration: none;
+            background: #fff;
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        
+        .service .btn:hover {
+            background: #ccc;
+        }
+        
+        .more-services-btn {
+            display: inline-block;
+            margin-top: 40px;
+            text-decoration: none;
+            background: #fff;
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        
+        .more-services-btn:hover {
+            background: #ccc;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content h2 {
+                font-size: 32px;
+            }
+        
+            .header-content p {
+                font-size: 18px;
+            }
+        
+            nav ul li {
+                margin-left: 10px;
+            }
+        
+            nav ul li a {
+                font-size: 16px;
+            }
+        
+            .about-me .container {
+                flex-direction: column;
+            }
+        
+            .about-me .text h1 {
+                font-size: 2em;
+            }
+        
+            .about-me .text p {
+                font-size: 1em;
+            }
+        
+            .services-box {
+                flex-direction: column;
+                align-items: center;
+            }
+        
+            .service {
+                margin: 20px 0;
+            }
+        }
+        /* Existing Styles */
+
+        /* Footer Section */
+        social-icon {
+            font-size: 1.5em;
+            margin-left: 15px;
+        }
+
+        .social-icon i {
+            color: #fff;
+            transition: color 0.3s ease;
+        }
+
+        .social-icon i:hover {
+            color: #aaa;
+        }
+
+        .footer {
+            background-color:#021242;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .footer-info, .contact-form {
+            flex: 1;
+            margin: 10px;
+        }
+
+        .footer-info p, .footer-credits p {
+            margin: 5px 0;
+        }
+
+        .footer-info a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-info a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-social a {
+            margin: 0 10px;
+            display: inline-block;
+        }
+
+        .footer-social img {
+            width: 24px;
+            height: 24px;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-social img:hover {
+            opacity: 0.7;
+        }
+
+        .footer-credits {
+            margin-top: 20px;
+            font-size: smaller;
+        }
+
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form label {
+            margin-top: 10px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .contact-form button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #555;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #777;
+        }
+
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-info, .contact-form {
+                margin: 20px 0;
+            }
+        }
+        .submit-btn {
+            padding: 10px 20px;
+            font-size: 1.1em;
+            color: #fff;
+            background-color: #007BFF; /* Change the color as needed */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            width: fit-content;
+            align-self: center;
+        }
+
+        .submit-btn:hover {
+            background-color: #0056b3; /* Change the hover color as needed */
+            transform: scale(1.05);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .submit-btn {
+                width: 100%; /* Full width on smaller screens */
+                align-self: stretch;
+            }
+        }
+
+
+        ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  
+  li {
+    float: left;
+  }
+  
+  li a:hover {
+    background-color: black;
+  }
+  
+  li a {
+    display: block;
+    color:bisque;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+
+
+    </style>
+</head>
+<body>
+
+
+    
+
+    
+<nav>
+    <ul>
+        <li><a href="HOME.html">HOME</a></li>
+        <li><a href="SAID.html">SAID</a></li>
+        <li><a href="NICOLOUS.html">NICOLOUS</a></li>
+        <li><a href="devis.html">DEVIS</a></li>
+        <li><a href="About_sinbad.html">SINBAD</a></li> 
+        <li><a href="FLORA.html">FLORA</a></li>
+        <li><a href="lisa.html">LISA</a></li>
+        <li><a href="sag.html">MANGANYU</a></li>
+        <li><a href="CLIFOD1.HTML">CLIFOD</a></li>
+        <li><a href="ISACK.html">ISACK</a></li>
+        <li><a href="CRISS.HTML">CRISS</a></li>
+    </ul>
+</nav>
+
+
+
+
+    <header>
+        <!--
+        <div class="navbar">
+            <div class="container">
+                <h1 class="logo">LISA NJAU</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#login">Log In</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>-->
+        <div class="header-content">
+            <h2>PASSION DRIVES SUCCESS</h2>
+            <p>Welcome to my world of Data Science and Web Development</p>
+            <a href="#about" class="btn">Discover More</a>
+        </div>
+    </header>
+
+    <section id="about" class="about-me">
+        <div class="container">
+            <div class="text">
+                <h1>About Me</h1>
+                <p>My name is Lisa Njau. I was born in Moshi, I am a second-year student at Mbeya University of Science and Technology (MUST), where I'm diving deep into the world of Data Science. I've always been fascinated by the power of data and how it can be used to solve real-world problems. In my studies, I've been learning all about programming languages like Python, C, and C++, and I've been having a blast building websites using cool tools like Django, HTML5, and CSS3.</p>
+                <p>One of my favorite things to do is to explore data and uncover interesting patterns and insights. I've gotten pretty good at crunching numbers and visualizing data in graphs and charts so that everyone can understand what's going on. I've also been learning how to build computer models that can predict things based on data, which is super exciting.</p>
+                <p>Outside of my classes, I've been working on some cool projects. Right now, I'm in the process of creating a website for an agriculture company called Agrifarm. It's been a challenging but rewarding experience, and I can't wait to see the final product. I've also had the opportunity to work on other projects, like designing websites for companies such as Moze Agriculture and Duka Ulipo, as well as creating eye-catching business cards that people love.</p>
+                <p>I'm a big fan of being creative, and I love using software like Adobe Photoshop, Illustrator, Canva, and Figma to bring my ideas to life. Whether it's designing a new website or coming up with a unique business card design, I'm always up for a challenge. I'm constantly learning and growing, and I'm excited to see where my journey in Data Science takes me next.</p>
+            </div>
+            <div class="image">
+                <img src="images/lisa image.jpg" alt="Lisa Njau">
+            </div>
+        </div>
+    </section>
+    <section id="services" class="services">
+        <h2>How I Can Help You</h2>
+        <div class="container">
+            <div class="services-box">
+                <div class="service">
+                    <h3>Front End Developer</h3>
+                    <p>Building responsive and dynamic websites using HTML, CSS, and JavaScript.</p>
+                    <p>Duration: 45 min</p>
+                    <a href="#contact" class="btn">Book Now</a>
+                </div>
+                <div class="service">
+                    <h3>Machine Learning</h3>
+                    <p>Creating predictive models and analyzing data to uncover insights.</p>
+                    <p>Duration: 1 hr</p>
+                    <p>Price: $70</p>
+                    <a href="#contact" class="btn">Book Now</a>
+                </div>
+                <div class="service">
+                    <h3>Graphic Design</h3>
+                    <p>Designing visually appealing graphics using tools like Photoshop and Illustrator.</p>
+                    <p>Available: Mon, Tue, Wed, Thu, Fri</p>
+                    <p>Duration: 1 hr</p>
+                    <p>Price: $90</p>
+                    <a href="#contact" class="btn">Book Now</a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="more-services-btn">More Services</a>
+    </section>
+    <footer id="contact" class="footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <p>300 Ikuti Street, Mbeya City, Tanzania</p>
+                <p>Tel: +255-756-461-441 or +255-782-074-267</p>
+                <p>Email: <a href="mailto:lissanjau321@gmail.com">lissanjau321@gmail.com</a></p>
+                <div class="footer-social">
+                    <a href="https://vm.tiktok.com/ZMMW9bmoe/" target="_blank" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://youtube.com/@PrincipleLady?si=2qhdNk5h7UtprsS-" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="footer-credits">
+                    <p>© 2024 Lisa Njau.</p>
+                    <p>Powered and secured by Principle Lady.</p>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form action="#" method="post">
+                    <label for="name">Enter your name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Enter your email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="subject">Enter your subject:</label>
+                    <input type="text" id="subject" name="subject" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,124 @@
+* {
+  padding: 0;
+  margin: o;
+  border-radius: border-box;
+  font-size: 105%;
+}
+body {
+  margin: 0;
+  background-color: rgb(31, 24, 24);
+  color: whitesmoke;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(19, 19, 39);
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4 0;
+  height: 120px;
+  font-size: 24px;
+}
+.footer {
+  position: relative;
+  background-color: rgb(19, 19, 39);
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-evenly;
+  font-size: 16px;
+}
+.content {
+  display: flex;
+  flex-direction: row;
+  background-color: transparent;
+}
+.describe {
+  position: sticky;
+  top: 14%;
+  text-align: center;
+  border: 2px solid;
+  margin-left: 2rem;
+  border-radius: 0.8rem;
+  background-color: rgb(19, 19, 39);
+  opacity: 0.6;
+  height: 2rem;
+  padding-top: 0.4rem;
+}
+.study {
+  width: 100%;
+  height: 20%;
+  border: 2px solid black;
+  margin-bottom: 2rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 2rem;
+  background-color: rgb(38, 34, 39);
+  font-size: 80%;
+  text-align: center;
+}
+.leftside {
+  width: 50%;
+  margin: 2rem;
+  padding: 2rem;
+}
+.rightside {
+  width: 50%;
+  margin: 2rem;
+  padding: 2rem;
+}
+img {
+  width: 60%;
+  border-radius: 1.2rem;
+  height: 50%;
+  margin-bottom: 0.5rem;
+}
+.members {
+    background-color: rgb(180, 175, 212);
+  width: 50%;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  color: rgb(19, 19, 39);
+  height: 2rem;
+  border-radius: 4rem;
+}
+.members:hover {
+  background-color: rgb(68, 68, 99);
+  color: white;
+}
+
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+
+li {
+  float: left;
+}
+
+li a:hover {
+  background-color: black;
+}
+
+li a {
+  display: block;
+  color:bisque;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
